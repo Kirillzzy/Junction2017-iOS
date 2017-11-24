@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="PE2-W3-u48"/>
+                        <segue destination="tLi-v7-zlX" kind="relationship" relationship="viewControllers" id="PE2-W3-u48"/>
                         <segue destination="cgK-gm-2xB" kind="relationship" relationship="viewControllers" id="Qf4-9e-IuT"/>
                     </connections>
                 </tabBarController>
@@ -28,23 +28,42 @@
             </objects>
             <point key="canvasLocation" x="-906" y="299"/>
         </scene>
-        <!--Item-->
+        <!--Goods list-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Junction2017_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lco-p7-d41">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XZf-ax-Mra"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HH6-47-xDE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lco-p7-d41" secondAttribute="bottom" id="Ezx-CK-Ibp"/>
+                            <constraint firstItem="lco-p7-d41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yfr-da-bMO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lco-p7-d41" secondAttribute="trailing" id="vcW-09-opA"/>
+                            <constraint firstItem="lco-p7-d41" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xA9-ke-N21"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="tab_list" id="6aY-Js-RCr"/>
+                    <navigationItem key="navigationItem" title="Goods list" id="Y2d-pM-dfq"/>
+                    <connections>
+                        <outlet property="tableView" destination="lco-p7-d41" id="esL-PZ-6KH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="27"/>
+            <point key="canvasLocation" x="768.79999999999995" y="26.53673163418291"/>
         </scene>
-        <!--Item-->
+        <!--Camera-->
         <scene sceneID="GQM-aR-hJZ">
             <objects>
                 <viewController id="cgK-gm-2xB" customClass="CameraViewController" customModule="Junction2017_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,11 +73,30 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="OSw-Hl-9du"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="tab_camera" id="ZHa-GK-Faj"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="tab_camera" id="ZHa-GK-Faj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMa-cZ-eaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33" y="715"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="tDA-mu-RWO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tLi-v7-zlX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="tab_list" id="6aY-Js-RCr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmO-T3-R06">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6FJ-Oz-v2r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zBn-fo-aT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="26.986506746626688"/>
         </scene>
     </scenes>
     <resources>

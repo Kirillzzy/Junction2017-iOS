@@ -13,6 +13,7 @@
 		8A8823A91FC8806800BF2FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8823A81FC8806800BF2FED /* Assets.xcassets */; };
 		8A8823AC1FC8806800BF2FED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8823AA1FC8806800BF2FED /* LaunchScreen.storyboard */; };
 		8A8823B71FC897A900BF2FED /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823B61FC897A900BF2FED /* CameraViewController.swift */; };
+		8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8A8823AB1FC8806800BF2FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A8823AD1FC8806800BF2FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8823B61FC897A900BF2FED /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				8A8823A11FC8806800BF2FED /* AppDelegate.swift */,
 				8A8823B41FC880ED00BF2FED /* ViewControllers */,
+				8A8823B91FC89A6E00BF2FED /* Entities */,
 				8A8823B31FC880DB00BF2FED /* Storyboards */,
 				8A8823A81FC8806800BF2FED /* Assets.xcassets */,
 				8A8823AD1FC8806800BF2FED /* Info.plist */,
@@ -81,6 +84,14 @@
 				8A8823B61FC897A900BF2FED /* CameraViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8A8823B91FC89A6E00BF2FED /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8823A41FC8806800BF2FED /* MainViewController.swift in Sources */,
+				8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */,
 				8A8823A21FC8806800BF2FED /* AppDelegate.swift in Sources */,
 				8A8823B71FC897A900BF2FED /* CameraViewController.swift in Sources */,
 			);

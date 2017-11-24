@@ -9,9 +9,41 @@
 import UIKit
 
 class MainViewController: UIViewController {
+  @IBOutlet var tableView: UITableView!
+  var goodEntities: [GoodEntity] {
+    var goods = [GoodEntity]()
+    goods.append(GoodEntity(id: 0, company: "MAZA RUSSIA", status: "Great"))
+    goods.append(GoodEntity(id: 1, company: "Finland", status: "Bad"))
+    goods.append(GoodEntity(id: 2, company: "Big Good", status: "Suspended"))
+    goods.append(GoodEntity(id: 3, company: "Like a Boss", status: "Great"))
+    goods.append(GoodEntity(id: 4, company: "MAZA RUSSIA", status: "Great"))
+    goods.append(GoodEntity(id: 5, company: "Finland", status: "Bad"))
+    goods.append(GoodEntity(id: 6, company: "Big Good", status: "Suspended"))
+    goods.append(GoodEntity(id: 7, company: "Like a Boss", status: "Great"))
+    return goods
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+  }
+}
+
+// MARK: - TableViewDelegate & TableViewDataSource
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return goodEntities.count
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return tableView.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell //swiftlint:disable:this force_cast
+  }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
 }
