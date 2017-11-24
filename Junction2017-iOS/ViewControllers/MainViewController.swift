@@ -41,12 +41,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     return goodEntities.count
   }
 
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let view = Bundle.main.loadNibNamed("HeaderGoodView", owner: self,
-                                        options: nil)?.first as! HeaderGoodView
-    // swiftlint:disable:previous force_cast
-    return view
-  }
+//  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//    let view = Bundle.main.loadNibNamed("HeaderGoodView", owner: self,
+//                                        options: nil)?.first as! HeaderGoodView
+//    
+//    return view
+//  }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     //swiftlint:disable:next force_cast
