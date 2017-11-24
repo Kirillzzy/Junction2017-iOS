@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderGoodView" customModule="Junction2017_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBS-9y-5yN">
+                    <rect key="frame" x="24" y="12" width="55" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVz-gf-RTp">
+                    <rect key="frame" x="205.5" y="12" width="139.5" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxJ-tS-tfb">
+                    <rect key="frame" x="87" y="12" width="110.5" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xBS-9y-5yN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="2QS-Fp-oUV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lVz-gf-RTp" secondAttribute="trailing" constant="24" id="3Xj-sF-xOE"/>
+                <constraint firstItem="lVz-gf-RTp" firstAttribute="leading" secondItem="LxJ-tS-tfb" secondAttribute="trailing" constant="8" id="72r-qp-1X9"/>
+                <constraint firstItem="LxJ-tS-tfb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="Anv-No-Xt1"/>
+                <constraint firstItem="xBS-9y-5yN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="BQU-kE-7Ri"/>
+                <constraint firstItem="LxJ-tS-tfb" firstAttribute="leading" secondItem="xBS-9y-5yN" secondAttribute="trailing" constant="8" id="FZU-SK-JV9"/>
+                <constraint firstItem="LxJ-tS-tfb" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="JAy-n8-DeQ"/>
+                <constraint firstItem="xBS-9y-5yN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.15" id="NDN-Ku-hP7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lVz-gf-RTp" secondAttribute="bottom" constant="12" id="aMQ-Qk-O7z"/>
+                <constraint firstItem="lVz-gf-RTp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="l4k-B0-ezc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xBS-9y-5yN" secondAttribute="bottom" constant="12" id="lZ4-Rk-7Ow"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LxJ-tS-tfb" secondAttribute="bottom" constant="12" id="wov-KV-lLN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="companyLabel" destination="LxJ-tS-tfb" id="B13-gV-6pB"/>
+                <outlet property="idLabel" destination="xBS-9y-5yN" id="nGV-dA-NHr"/>
+                <outlet property="statusLabel" destination="lVz-gf-RTp" id="SsZ-HM-bpl"/>
+            </connections>
+            <point key="canvasLocation" x="4.5" y="-231.5"/>
+        </view>
+    </objects>
+</document>

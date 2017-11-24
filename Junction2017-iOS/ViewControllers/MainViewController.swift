@@ -27,6 +27,7 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
     tableView.register(UINib(nibName: "GoodTableViewCell", bundle: nil),
                           forCellReuseIdentifier: "GoodTableViewCell")
+    tableView.sectionHeaderHeight = 40
   }
 }
 
@@ -38,6 +39,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return goodEntities.count
+  }
+
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let view = Bundle.main.loadNibNamed("HeaderGoodView", owner: self,
+                                        options: nil)?.first as! HeaderGoodView
+    // swiftlint:disable:previous force_cast
+    return view
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
