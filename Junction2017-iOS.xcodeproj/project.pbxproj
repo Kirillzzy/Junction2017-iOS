@@ -14,6 +14,8 @@
 		8A8823AC1FC8806800BF2FED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8823AA1FC8806800BF2FED /* LaunchScreen.storyboard */; };
 		8A8823B71FC897A900BF2FED /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823B61FC897A900BF2FED /* CameraViewController.swift */; };
 		8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */; };
+		8A8823C11FC89C4500BF2FED /* GoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823BF1FC89C4500BF2FED /* GoodTableViewCell.swift */; };
+		8A8823C21FC89C4500BF2FED /* GoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8823C01FC89C4500BF2FED /* GoodTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		8A8823AD1FC8806800BF2FED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8823B61FC897A900BF2FED /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodEntity.swift; sourceTree = "<group>"; };
+		8A8823BF1FC89C4500BF2FED /* GoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodTableViewCell.swift; sourceTree = "<group>"; };
+		8A8823C01FC89C4500BF2FED /* GoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			children = (
 				8A8823A11FC8806800BF2FED /* AppDelegate.swift */,
 				8A8823B41FC880ED00BF2FED /* ViewControllers */,
+				8A8823BC1FC89C1E00BF2FED /* Custom */,
 				8A8823B91FC89A6E00BF2FED /* Entities */,
 				8A8823B31FC880DB00BF2FED /* Storyboards */,
 				8A8823A81FC8806800BF2FED /* Assets.xcassets */,
@@ -92,6 +97,31 @@
 				8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		8A8823BC1FC89C1E00BF2FED /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				8A8823BD1FC89C2E00BF2FED /* Cells */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		8A8823BD1FC89C2E00BF2FED /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A8823BE1FC89C3700BF2FED /* GoodTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A8823BE1FC89C3700BF2FED /* GoodTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A8823BF1FC89C4500BF2FED /* GoodTableViewCell.swift */,
+				8A8823C01FC89C4500BF2FED /* GoodTableViewCell.xib */,
+			);
+			path = GoodTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +186,7 @@
 			files = (
 				8A8823AC1FC8806800BF2FED /* LaunchScreen.storyboard in Resources */,
 				8A8823A91FC8806800BF2FED /* Assets.xcassets in Resources */,
+				8A8823C21FC89C4500BF2FED /* GoodTableViewCell.xib in Resources */,
 				8A8823A71FC8806800BF2FED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8823A41FC8806800BF2FED /* MainViewController.swift in Sources */,
+				8A8823C11FC89C4500BF2FED /* GoodTableViewCell.swift in Sources */,
 				8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */,
 				8A8823A21FC8806800BF2FED /* AppDelegate.swift in Sources */,
 				8A8823B71FC897A900BF2FED /* CameraViewController.swift in Sources */,

@@ -25,7 +25,8 @@ class MainViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    tableView.register(UINib(nibName: "GoodTableViewCell", bundle: nil),
+                          forCellReuseIdentifier: "GoodTableViewCell")
   }
 }
 
@@ -40,7 +41,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return tableView.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell //swiftlint:disable:this force_cast
+    //swiftlint:disable:next force_cast
+    let cell = tableView.dequeueReusableCell(withIdentifier: "GoodTableViewCell") as! GoodTableViewCell
+    cell.configure(with: goodEntities[indexPath.row])
+    return cell
   }
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
