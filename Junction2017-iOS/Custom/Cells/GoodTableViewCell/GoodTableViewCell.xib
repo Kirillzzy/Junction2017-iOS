@@ -24,19 +24,19 @@
                         <rect key="frame" x="8" y="4" width="342" height="79.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-qP-ClH">
-                                <rect key="frame" x="16" y="8" width="51.5" height="63.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="8" width="34" height="63.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-ba-mC4">
-                                <rect key="frame" x="186" y="8" width="140" height="63.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WOC-ba-mC4">
+                                <rect key="frame" x="168.5" y="8" width="157.5" height="63.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Izw-JL-sCq">
-                                <rect key="frame" x="75.5" y="8" width="102.5" height="63.5"/>
+                                <rect key="frame" x="58" y="8" width="102.5" height="63.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                             <constraint firstAttribute="bottom" secondItem="Izw-JL-sCq" secondAttribute="bottom" constant="8" id="i4D-Hp-CZD"/>
                             <constraint firstItem="WOC-ba-mC4" firstAttribute="leading" secondItem="Izw-JL-sCq" secondAttribute="trailing" constant="8" id="jIK-xm-eyW"/>
                             <constraint firstItem="NZx-qP-ClH" firstAttribute="top" secondItem="sLV-z8-eUo" secondAttribute="top" constant="8" id="kua-9v-yRE"/>
-                            <constraint firstItem="NZx-qP-ClH" firstAttribute="width" secondItem="sLV-z8-eUo" secondAttribute="width" multiplier="0.15" id="la5-FS-GkC"/>
+                            <constraint firstItem="NZx-qP-ClH" firstAttribute="width" secondItem="sLV-z8-eUo" secondAttribute="width" multiplier="0.1" id="la5-FS-GkC"/>
                             <constraint firstAttribute="bottom" secondItem="NZx-qP-ClH" secondAttribute="bottom" constant="8" id="v5k-UX-y3H"/>
                             <constraint firstItem="Izw-JL-sCq" firstAttribute="width" secondItem="sLV-z8-eUo" secondAttribute="width" multiplier="0.3" id="yD2-tB-2RZ"/>
                         </constraints>

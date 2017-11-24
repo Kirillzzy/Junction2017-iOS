@@ -19,7 +19,7 @@ class GoodTableViewCell: UITableViewCell {
     }
   }
   func configure(with entity: GoodEntity) {
-    idLabel.text = String(describing: entity.id)
+    idLabel.text = String(describing: entity.id) + "."
     companyLabel.text = entity.company
     statusLabel.text = entity.status
   }

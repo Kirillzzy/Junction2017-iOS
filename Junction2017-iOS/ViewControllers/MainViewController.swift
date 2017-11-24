@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     super.viewDidLoad()
     tableView.register(UINib(nibName: "GoodTableViewCell", bundle: nil),
                           forCellReuseIdentifier: "GoodTableViewCell")
-    tableView.sectionHeaderHeight = 40
+    tableView.sectionHeaderHeight = 50
   }
 }
 

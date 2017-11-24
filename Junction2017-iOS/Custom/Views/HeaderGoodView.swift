@@ -12,7 +12,12 @@ class HeaderGoodView: UIView {
   @IBOutlet var idLabel: UILabel!
   @IBOutlet var companyLabel: UILabel!
   @IBOutlet var statusLabel: UILabel!
-
+  @IBOutlet var mainView: UIView! {
+    didSet {
+      mainView.layer.masksToBounds = true
+      mainView.layer.cornerRadius = 10
+    }
+  }
   // MARK: - For loading from Nib
   override func awakeAfter(using aDecoder: NSCoder) -> Any? {
     return self.loadFromNibIfEmbeddedInDifferentNib()
