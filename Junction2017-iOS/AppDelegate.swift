@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//    requestAuthorisation()
+    requestAuthorisation()
     return true
   }
 
@@ -31,11 +31,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
 
+  func application(_ application: UIApplication,
+                   continue userActivity: NSUserActivity,
+                   restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+    guard let intent = userActivity.interaction?.intent as? INGetVisualCodeIntent else {
+      print("AppDelegate: Start Workout Intent - FALSE")
+      return false
+    }
+    print("AppDelegate: Start Workout Intent - TRUE")
+    print(intent)
+
+    AppDelegate.selectedBarIndex = 1
+    self.window?.rootViewController
+      = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
+    return true
+  }
+
   private func requestAuthorisation() {
     INPreferences.requestSiriAuthorization { status in
       if status == .authorized {
-        INVocabulary.shared().setVocabularyStrings(["I ship the goods", "I brought the goods"],
-                                                   of: .notebookItemTitle)
         print("Siri authorized")
       } else {
         print("Siri authorization failed")

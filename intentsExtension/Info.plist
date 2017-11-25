@@ -28,7 +28,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>INNotebookItemIntent</string>
+				<string>INGetVisualCodeIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

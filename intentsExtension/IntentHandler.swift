@@ -18,9 +18,7 @@ import Intents
 // "Search for messages in <myApp>"
 
 class IntentHandler: INExtension {
-
   override func handler(for intent: INIntent) -> Any {
-    print(intent.identifier)
     return self
   }
 }
