@@ -29,6 +29,10 @@ class MainViewController: UIViewController {
                           forCellReuseIdentifier: "GoodTableViewCell")
     tableView.sectionHeaderHeight = 50
   }
+
+  override func customTabBarItemContentView() -> CustomTabBarItemView {
+    return TabBarItemView.create(with: .list)
+  }
 }
 
 // MARK: - TableViewDelegate & TableViewDataSource

@@ -39,6 +39,10 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
   }
 
+  override func customTabBarItemContentView() -> CustomTabBarItemView {
+    return TabBarItemView.create(with: .camera)
+  }
+
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     if captureSession?.isRunning == false {
