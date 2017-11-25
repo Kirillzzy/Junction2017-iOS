@@ -48,7 +48,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     if activeDisplayMode == .compact {
       self.preferredContentSize = maxSize
     } else {
-      self.preferredContentSize = CGSize(width: maxSize.width, height: 200)
+      self.preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(37 * goodEntities.count))
     }
   }
 
