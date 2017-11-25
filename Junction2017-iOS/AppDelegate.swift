@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func requestAuthorisation() {
     INPreferences.requestSiriAuthorization { status in
       if status == .authorized {
+        INVocabulary.shared().setVocabularyStrings(["I ship the goods", "I brought the goods"],
+                                                   of: .notebookItemTitle)
         print("Siri authorized")
       } else {
         print("Siri authorization failed")

@@ -28,7 +28,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>INOpenCameraIntent</string>
+				<string>INNotebookItemIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
