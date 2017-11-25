@@ -19,3 +19,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
 }
+
+let mainStoryboad = UIStoryboard(name: "Main", bundle: nil)

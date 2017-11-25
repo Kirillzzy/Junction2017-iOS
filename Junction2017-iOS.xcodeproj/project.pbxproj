@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A566F131FC954EF0010B59A /* ContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A566F121FC954EF0010B59A /* ContractViewController.swift */; };
 		8A8823A21FC8806800BF2FED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823A11FC8806800BF2FED /* AppDelegate.swift */; };
 		8A8823A41FC8806800BF2FED /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823A31FC8806800BF2FED /* MainViewController.swift */; };
 		8A8823A71FC8806800BF2FED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8823A51FC8806800BF2FED /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A566F121FC954EF0010B59A /* ContractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractViewController.swift; sourceTree = "<group>"; };
 		8A88239E1FC8806800BF2FED /* Junction2017-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junction2017-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8823A11FC8806800BF2FED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8823A31FC8806800BF2FED /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				8A8823A31FC8806800BF2FED /* MainViewController.swift */,
 				8A8823B61FC897A900BF2FED /* CameraViewController.swift */,
+				8A566F121FC954EF0010B59A /* ContractViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				8A8823A41FC8806800BF2FED /* MainViewController.swift in Sources */,
 				8A8823C11FC89C4500BF2FED /* GoodTableViewCell.swift in Sources */,
 				8A8823CA1FC8A45D00BF2FED /* UIView+NibLoad.swift in Sources */,
+				8A566F131FC954EF0010B59A /* ContractViewController.swift in Sources */,
 				8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */,
 				8A8823A21FC8806800BF2FED /* AppDelegate.swift in Sources */,
 				8A8823B71FC897A900BF2FED /* CameraViewController.swift in Sources */,

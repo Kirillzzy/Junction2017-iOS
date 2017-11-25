@@ -13,6 +13,7 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
 
   var previewLayer: AVCaptureVideoPreviewLayer!
   var captureSession: AVCaptureSession!
+  var readed: Bool = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,13 +39,10 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
   }
 
-  override var prefersStatusBarHidden: Bool {
-    return true
-  }
-
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     if captureSession?.isRunning == false {
+      readed = false
       captureSession.startRunning()
     }
   }
@@ -60,12 +58,17 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
                       didOutput metadataObjects: [AVMetadataObject],
                       from connection: AVCaptureConnection) {
     guard metadataObjects.count != 0 else { return }
-    guard let metadataObject = metadataObjects[0] as? AVMetadataMachineReadableCodeObject else { return }
+    guard let metadataObject = metadataObjects[0] as? AVMetadataMachineReadableCodeObject,
+      readed == false else { return }
     guard let stringCodeValue = metadataObject.stringValue else { return }
+    readed = true
     barCodeFound(stringCodeValue)
   }
 
   func barCodeFound(_ stringCode: String) {
-
+    guard let presentViewController = mainStoryboad.instantiateViewController(withIdentifier: "ContractViewController")
+      as? ContractViewController else { return }
+    presentViewController.scannedQrString = stringCode
+    navigationController?.pushViewController(presentViewController, animated: true)
   }
 }
