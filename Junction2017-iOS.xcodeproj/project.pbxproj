@@ -28,7 +28,52 @@
 		8AB109001FC983CD001D0AA0 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108FE1FC983CC001D0AA0 /* TabBarItemView.swift */; };
 		8AB109011FC983CD001D0AA0 /* TabBarItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AB108FF1FC983CD001D0AA0 /* TabBarItemView.xib */; };
 		8AB109031FC98479001D0AA0 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB109021FC98479001D0AA0 /* UIImage+Render.swift */; };
+		8AB1090B1FC990D9001D0AA0 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1090A1FC990D9001D0AA0 /* NotificationCenter.framework */; };
+		8AB1090E1FC990D9001D0AA0 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1090D1FC990D9001D0AA0 /* TodayViewController.swift */; };
+		8AB109111FC990D9001D0AA0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AB1090F1FC990D9001D0AA0 /* MainInterface.storyboard */; };
+		8AB109161FC990D9001D0AA0 /* todayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AB109081FC990D9001D0AA0 /* todayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8AD6B66D1FC993D2000D55E8 /* GoodEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */; };
+		8AD6B66E1FC993E5000D55E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823A31FC8806800BF2FED /* MainViewController.swift */; };
+		8AD6B66F1FC9945F000D55E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823A11FC8806800BF2FED /* AppDelegate.swift */; };
+		8AD6B6701FC994E6000D55E8 /* GoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823BF1FC89C4500BF2FED /* GoodTableViewCell.swift */; };
+		8AD6B6711FC994E6000D55E8 /* GoodTableViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823C01FC89C4500BF2FED /* GoodTableViewCell.xib */; };
+		8AD6B6721FC99582000D55E8 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108F71FC980FC001D0AA0 /* CustomTabBarController.swift */; };
+		8AD6B6731FC99593000D55E8 /* UIView+NibLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823C91FC8A45D00BF2FED /* UIView+NibLoad.swift */; };
+		8AD6B6741FC9959A000D55E8 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108FE1FC983CC001D0AA0 /* TabBarItemView.swift */; };
+		8AD6B6751FC9959A000D55E8 /* TabBarItemView.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108FF1FC983CD001D0AA0 /* TabBarItemView.xib */; };
+		8AD6B6761FC995A6000D55E8 /* UIViewController+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108EE1FC9735A001D0AA0 /* UIViewController+BackButton.swift */; };
+		8AD6B6771FC995A6000D55E8 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108F31FC97882001D0AA0 /* UIColor+HexString.swift */; };
+		8AD6B6781FC995A6000D55E8 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108F51FC97898001D0AA0 /* String+Substring.swift */; };
+		8AD6B6791FC995A6000D55E8 /* UIImage+Render.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB109021FC98479001D0AA0 /* UIImage+Render.swift */; };
+		8AD6B67D1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */; };
+		8AD6B67E1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */; };
+		8AD6B67F1FC99920000D55E8 /* TodayExtensionGoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */; };
+		8AD6B6801FC99920000D55E8 /* TodayExtensionGoodTableViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AB109131FC990D9001D0AA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A8823961FC8806800BF2FED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AB109071FC990D9001D0AA0;
+			remoteInfo = todayExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8AB109151FC990D9001D0AA0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8AB109161FC990D9001D0AA0 /* todayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8A566F121FC954EF0010B59A /* ContractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +99,13 @@
 		8AB108FE1FC983CC001D0AA0 /* TabBarItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
 		8AB108FF1FC983CD001D0AA0 /* TabBarItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabBarItemView.xib; sourceTree = "<group>"; };
 		8AB109021FC98479001D0AA0 /* UIImage+Render.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Render.swift"; sourceTree = "<group>"; };
+		8AB109081FC990D9001D0AA0 /* todayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = todayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AB1090A1FC990D9001D0AA0 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8AB1090D1FC990D9001D0AA0 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8AB109101FC990D9001D0AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8AB109121FC990D9001D0AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayExtensionGoodTableViewCell.swift; sourceTree = "<group>"; };
+		8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayExtensionGoodTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +116,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AB109051FC990D9001D0AA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB1090B1FC990D9001D0AA0 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				8A8823A01FC8806800BF2FED /* Junction2017-iOS */,
+				8AB1090C1FC990D9001D0AA0 /* todayExtension */,
+				8AB109091FC990D9001D0AA0 /* Frameworks */,
 				8A88239F1FC8806800BF2FED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				8A88239E1FC8806800BF2FED /* Junction2017-iOS.app */,
+				8AB109081FC990D9001D0AA0 /* todayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +202,7 @@
 		8A8823BD1FC89C2E00BF2FED /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8AD6B67A1FC9979D000D55E8 /* TodayExtensionGoodTableViewCell */,
 				8A8823BE1FC89C3700BF2FED /* GoodTableViewCell */,
 			);
 			path = Cells;
@@ -192,6 +256,33 @@
 			path = TabBarItemView;
 			sourceTree = "<group>";
 		};
+		8AB109091FC990D9001D0AA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AB1090A1FC990D9001D0AA0 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AB1090C1FC990D9001D0AA0 /* todayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8AB1090D1FC990D9001D0AA0 /* TodayViewController.swift */,
+				8AB1090F1FC990D9001D0AA0 /* MainInterface.storyboard */,
+				8AB109121FC990D9001D0AA0 /* Info.plist */,
+			);
+			path = todayExtension;
+			sourceTree = "<group>";
+		};
+		8AD6B67A1FC9979D000D55E8 /* TodayExtensionGoodTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */,
+				8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */,
+			);
+			path = TodayExtensionGoodTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,15 +294,34 @@
 				8A88239B1FC8806800BF2FED /* Frameworks */,
 				8A88239C1FC8806800BF2FED /* Resources */,
 				8A8823B51FC8815C00BF2FED /* Swiftlint */,
+				8AB109151FC990D9001D0AA0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8AB109141FC990D9001D0AA0 /* PBXTargetDependency */,
 			);
 			name = "Junction2017-iOS";
 			productName = "Junction2017-iOS";
 			productReference = 8A88239E1FC8806800BF2FED /* Junction2017-iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8AB109071FC990D9001D0AA0 /* todayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AB109171FC990D9001D0AA0 /* Build configuration list for PBXNativeTarget "todayExtension" */;
+			buildPhases = (
+				8AB109041FC990D9001D0AA0 /* Sources */,
+				8AB109051FC990D9001D0AA0 /* Frameworks */,
+				8AB109061FC990D9001D0AA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = todayExtension;
+			productName = todayExtension;
+			productReference = 8AB109081FC990D9001D0AA0 /* todayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -219,12 +329,16 @@
 		8A8823961FC8806800BF2FED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Kirill Averyanov";
 				TargetAttributes = {
 					8A88239D1FC8806800BF2FED = {
 						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					8AB109071FC990D9001D0AA0 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -243,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				8A88239D1FC8806800BF2FED /* Junction2017-iOS */,
+				8AB109071FC990D9001D0AA0 /* todayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -253,11 +368,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8823C71FC8A16200BF2FED /* HeaderGoodView.xib in Resources */,
+				8AD6B67E1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib in Resources */,
 				8A8823AC1FC8806800BF2FED /* LaunchScreen.storyboard in Resources */,
 				8A8823A91FC8806800BF2FED /* Assets.xcassets in Resources */,
 				8AB109011FC983CD001D0AA0 /* TabBarItemView.xib in Resources */,
 				8A8823C21FC89C4500BF2FED /* GoodTableViewCell.xib in Resources */,
 				8A8823A71FC8806800BF2FED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AB109061FC990D9001D0AA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AB109111FC990D9001D0AA0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +419,7 @@
 				8AB108F41FC97882001D0AA0 /* UIColor+HexString.swift in Sources */,
 				8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */,
 				8A8823A21FC8806800BF2FED /* AppDelegate.swift in Sources */,
+				8AD6B67D1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift in Sources */,
 				8AB108EF1FC9735A001D0AA0 /* UIViewController+BackButton.swift in Sources */,
 				8AB108F81FC980FC001D0AA0 /* CustomTabBarController.swift in Sources */,
 				8AB108F11FC9736E001D0AA0 /* NavigationViewController.swift in Sources */,
@@ -303,7 +428,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8AB109041FC990D9001D0AA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD6B67F1FC99920000D55E8 /* TodayExtensionGoodTableViewCell.swift in Sources */,
+				8AD6B6801FC99920000D55E8 /* TodayExtensionGoodTableViewCell.xib in Sources */,
+				8AD6B6761FC995A6000D55E8 /* UIViewController+BackButton.swift in Sources */,
+				8AD6B6771FC995A6000D55E8 /* UIColor+HexString.swift in Sources */,
+				8AD6B6781FC995A6000D55E8 /* String+Substring.swift in Sources */,
+				8AD6B6791FC995A6000D55E8 /* UIImage+Render.swift in Sources */,
+				8AD6B6741FC9959A000D55E8 /* TabBarItemView.swift in Sources */,
+				8AD6B6751FC9959A000D55E8 /* TabBarItemView.xib in Sources */,
+				8AD6B6731FC99593000D55E8 /* UIView+NibLoad.swift in Sources */,
+				8AD6B6721FC99582000D55E8 /* CustomTabBarController.swift in Sources */,
+				8AD6B6701FC994E6000D55E8 /* GoodTableViewCell.swift in Sources */,
+				8AD6B6711FC994E6000D55E8 /* GoodTableViewCell.xib in Sources */,
+				8AD6B66F1FC9945F000D55E8 /* AppDelegate.swift in Sources */,
+				8AD6B66E1FC993E5000D55E8 /* MainViewController.swift in Sources */,
+				8AD6B66D1FC993D2000D55E8 /* GoodEntity.swift in Sources */,
+				8AB1090E1FC990D9001D0AA0 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AB109141FC990D9001D0AA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AB109071FC990D9001D0AA0 /* todayExtension */;
+			targetProxy = 8AB109131FC990D9001D0AA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8A8823A51FC8806800BF2FED /* Main.storyboard */ = {
@@ -320,6 +476,14 @@
 				8A8823AB1FC8806800BF2FED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8AB1090F1FC990D9001D0AA0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AB109101FC990D9001D0AA0 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -435,6 +599,7 @@
 		8A8823B11FC8806800BF2FED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
                 DEVELOPMENT_TEAM = KH2KDZEEE3;
@@ -451,6 +616,7 @@
 		8A8823B21FC8806800BF2FED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
                 DEVELOPMENT_TEAM = KH2KDZEEE3;
@@ -459,6 +625,38 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8AB109181FC990D9001D0AA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				INFOPLIST_FILE = todayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS.todayExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8AB109191FC990D9001D0AA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				INFOPLIST_FILE = todayExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS.todayExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,6 +679,15 @@
 			buildConfigurations = (
 				8A8823B11FC8806800BF2FED /* Debug */,
 				8A8823B21FC8806800BF2FED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AB109171FC990D9001D0AA0 /* Build configuration list for PBXNativeTarget "todayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AB109181FC990D9001D0AA0 /* Debug */,
+				8AB109191FC990D9001D0AA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
