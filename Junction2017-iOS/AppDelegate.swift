@@ -10,12 +10,23 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
   var window: UIWindow?
+  static var selectedBarIndex = 0
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    return true
+  }
+
+  func application(_ app: UIApplication, open url: URL,
+                   options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+    let string = url.absoluteString
+    if string.range(of: "read") != nil {
+      AppDelegate.selectedBarIndex = 1
+    }
+    self.window?.rootViewController
+      = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
     return true
   }
 }

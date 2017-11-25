@@ -51,6 +51,7 @@
 		8AD6B67E1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */; };
 		8AD6B67F1FC99920000D55E8 /* TodayExtensionGoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */; };
 		8AD6B6801FC99920000D55E8 /* TodayExtensionGoodTableViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */; };
+		8AD6B6A51FC9C4BB000D55E8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B6A41FC9C4BB000D55E8 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		8AB109121FC990D9001D0AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayExtensionGoodTableViewCell.swift; sourceTree = "<group>"; };
 		8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayExtensionGoodTableViewCell.xib; sourceTree = "<group>"; };
+		8AD6B6A41FC9C4BB000D55E8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 			children = (
 				8AB108F01FC9736E001D0AA0 /* NavigationViewController.swift */,
 				8AB108F71FC980FC001D0AA0 /* CustomTabBarController.swift */,
+				8AD6B6A41FC9C4BB000D55E8 /* TabBarViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				8A566F131FC954EF0010B59A /* ContractViewController.swift in Sources */,
 				8AB108F41FC97882001D0AA0 /* UIColor+HexString.swift in Sources */,
 				8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */,
+				8AD6B6A51FC9C4BB000D55E8 /* TabBarViewController.swift in Sources */,
 				8A8823A21FC8806800BF2FED /* AppDelegate.swift in Sources */,
 				8AD6B67D1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift in Sources */,
 				8AB108EF1FC9735A001D0AA0 /* UIViewController+BackButton.swift in Sources */,

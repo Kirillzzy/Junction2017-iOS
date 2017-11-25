@@ -4,16 +4,15 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Custom Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="TXn-Ab-gbA">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarViewContoller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vlh-8P-7YZ" customClass="CustomTabBarController" customModule="Junction2017_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarViewContoller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vlh-8P-7YZ" customClass="TabBarViewController" customModule="Junction2017_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ENB-0y-3kk" customClass="CustomTabBar" customModule="Junction2017_iOS" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
