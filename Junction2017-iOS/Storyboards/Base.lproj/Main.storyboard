@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="768.79999999999995" y="26.53673163418291"/>
         </scene>
-        <!--CAMERA-->
+        <!--QR CAMERA-->
         <scene sceneID="GQM-aR-hJZ">
             <objects>
                 <viewController storyboardIdentifier="CameraViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cgK-gm-2xB" customClass="CameraViewController" customModule="Junction2017_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,7 +73,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="OSw-Hl-9du"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CAMERA" id="S4x-zB-86H"/>
+                    <navigationItem key="navigationItem" title="QR CAMERA" id="S4x-zB-86H"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="PGr-1t-5lW" kind="show" identifier="toContractViewController" id="I10-5K-Ugb"/>

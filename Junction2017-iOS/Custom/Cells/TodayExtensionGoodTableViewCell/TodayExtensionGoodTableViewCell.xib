@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="78" id="KGk-i7-Jjw" customClass="TodayExtensionGoodTableViewCell" customModule="Junction2017_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="77.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUf-eh-Sxi">
+                        <rect key="frame" x="16" y="8" width="136" height="61.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3X-Fw-cdK">
+                        <rect key="frame" x="160" y="8" width="116.5" height="61.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE7-5f-sEh">
+                        <rect key="frame" x="284.5" y="8" width="87.5" height="61.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="aE7-5f-sEh" secondAttribute="trailing" constant="16" id="BKt-WV-qON"/>
+                    <constraint firstItem="HUf-eh-Sxi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="GjJ-Ed-BIo"/>
+                    <constraint firstAttribute="bottom" secondItem="HUf-eh-Sxi" secondAttribute="bottom" constant="8" id="Hwy-oN-EpD"/>
+                    <constraint firstItem="aE7-5f-sEh" firstAttribute="leading" secondItem="R3X-Fw-cdK" secondAttribute="trailing" constant="8" id="IJv-PR-I0N"/>
+                    <constraint firstItem="HUf-eh-Sxi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="K3p-Ye-ZyT"/>
+                    <constraint firstItem="R3X-Fw-cdK" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.3" id="abD-B9-Eyh"/>
+                    <constraint firstAttribute="bottom" secondItem="aE7-5f-sEh" secondAttribute="bottom" constant="8" id="cUE-Y9-DDc"/>
+                    <constraint firstItem="HUf-eh-Sxi" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.35" id="ckp-GQ-jh7"/>
+                    <constraint firstItem="R3X-Fw-cdK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="gmB-1j-MRW"/>
+                    <constraint firstItem="aE7-5f-sEh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="iV1-ND-gWy"/>
+                    <constraint firstAttribute="bottom" secondItem="R3X-Fw-cdK" secondAttribute="bottom" constant="8" id="rx6-8b-0e2"/>
+                    <constraint firstItem="R3X-Fw-cdK" firstAttribute="leading" secondItem="HUf-eh-Sxi" secondAttribute="trailing" constant="8" id="xaU-6D-dWf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="firstLabel" destination="HUf-eh-Sxi" id="EAd-1Y-I8I"/>
+                <outlet property="secondLabel" destination="R3X-Fw-cdK" id="0PW-FZ-28W"/>
+                <outlet property="thirdLabel" destination="aE7-5f-sEh" id="Tjl-aq-7PG"/>
+            </connections>
+            <point key="canvasLocation" x="63" y="64"/>
+        </tableViewCell>
+    </objects>
+</document>
