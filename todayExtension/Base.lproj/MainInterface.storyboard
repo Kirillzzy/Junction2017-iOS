@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,19 +18,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5vh-kF-Nne">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <rect key="frame" x="0.0" y="33" width="320" height="267"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="M4Y-Lb-cyx" id="rWl-16-acX"/>
                                     <outlet property="delegate" destination="M4Y-Lb-cyx" id="qge-3p-tZS"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDo-ps-Lms">
+                                <rect key="frame" x="12" y="0.0" width="136" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Open QR Camera">
+                                    <color key="titleColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openButtonAction:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="n4B-Nf-5B1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="5vh-kF-Nne" secondAttribute="trailing" id="PcY-py-KDS"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="5vh-kF-Nne" secondAttribute="bottom" id="S7n-gF-XRl"/>
-                            <constraint firstItem="5vh-kF-Nne" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="TzA-Hl-KPL"/>
+                            <constraint firstItem="5vh-kF-Nne" firstAttribute="top" secondItem="yDo-ps-Lms" secondAttribute="bottom" id="Ubj-I1-Oh4"/>
+                            <constraint firstItem="yDo-ps-Lms" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="12" id="Zud-jn-Njk"/>
                             <constraint firstItem="5vh-kF-Nne" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="jbS-58-qDf"/>
+                            <constraint firstItem="yDo-ps-Lms" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="qEY-Lc-FYu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
                     </view>
@@ -39,11 +50,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="300"/>
                     <connections>
+                        <outlet property="openButton" destination="yDo-ps-Lms" id="xQW-Dr-XAQ"/>
                         <outlet property="tableView" destination="5vh-kF-Nne" id="UJe-0G-osp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="132.23388305847078"/>
         </scene>
     </scenes>
 </document>

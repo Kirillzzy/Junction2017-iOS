@@ -11,6 +11,8 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
   @IBOutlet var tableView: UITableView!
+  @IBOutlet var openButton: UIButton!
+
   var displayMode: NCWidgetDisplayMode!
   var goodEntities: [GoodEntity] {
     var goods = [GoodEntity]()
@@ -42,16 +44,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     completionHandler(NCUpdateResult.newData)
   }
 
+  @IBAction private func openButtonAction(_ sender: Any) {
+    extensionContext?.open(URL(string: "tracktruck://read")!, completionHandler: nil)
+  }
   func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode,
                                         withMaximumSize maxSize: CGSize) {
     displayMode = activeDisplayMode
     if activeDisplayMode == .compact {
       self.preferredContentSize = maxSize
     } else {
-      self.preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(37 * goodEntities.count))
+      self.preferredContentSize = CGSize(width: maxSize.width, height: CGFloat(37 * (goodEntities.count + 1)))
     }
   }
-
 }
 
 // MARK: - TableViewDelegate & TableViewDataSource
