@@ -20,6 +20,10 @@
 		8A8823C51FC8A14D00BF2FED /* HeaderGoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823C41FC8A14D00BF2FED /* HeaderGoodView.swift */; };
 		8A8823C71FC8A16200BF2FED /* HeaderGoodView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A8823C61FC8A16200BF2FED /* HeaderGoodView.xib */; };
 		8A8823CA1FC8A45D00BF2FED /* UIView+NibLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823C91FC8A45D00BF2FED /* UIView+NibLoad.swift */; };
+		8AB108EF1FC9735A001D0AA0 /* UIViewController+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108EE1FC9735A001D0AA0 /* UIViewController+BackButton.swift */; };
+		8AB108F11FC9736E001D0AA0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108F01FC9736E001D0AA0 /* NavigationViewController.swift */; };
+		8AB108F41FC97882001D0AA0 /* UIColor+HexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108F31FC97882001D0AA0 /* UIColor+HexString.swift */; };
+		8AB108F61FC97898001D0AA0 /* String+Substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108F51FC97898001D0AA0 /* String+Substring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		8A8823C41FC8A14D00BF2FED /* HeaderGoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderGoodView.swift; sourceTree = "<group>"; };
 		8A8823C61FC8A16200BF2FED /* HeaderGoodView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderGoodView.xib; sourceTree = "<group>"; };
 		8A8823C91FC8A45D00BF2FED /* UIView+NibLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoad.swift"; sourceTree = "<group>"; };
+		8AB108EE1FC9735A001D0AA0 /* UIViewController+BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackButton.swift"; sourceTree = "<group>"; };
+		8AB108F01FC9736E001D0AA0 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		8AB108F31FC97882001D0AA0 /* UIColor+HexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexString.swift"; sourceTree = "<group>"; };
+		8AB108F51FC97898001D0AA0 /* String+Substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Substring.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		8A8823B41FC880ED00BF2FED /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8AB108F21FC97375001D0AA0 /* Base */,
 				8A8823A31FC8806800BF2FED /* MainViewController.swift */,
 				8A8823B61FC897A900BF2FED /* CameraViewController.swift */,
 				8A566F121FC954EF0010B59A /* ContractViewController.swift */,
@@ -148,8 +157,19 @@
 			isa = PBXGroup;
 			children = (
 				8A8823C91FC8A45D00BF2FED /* UIView+NibLoad.swift */,
+				8AB108EE1FC9735A001D0AA0 /* UIViewController+BackButton.swift */,
+				8AB108F31FC97882001D0AA0 /* UIColor+HexString.swift */,
+				8AB108F51FC97898001D0AA0 /* String+Substring.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8AB108F21FC97375001D0AA0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8AB108F01FC9736E001D0AA0 /* NavigationViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +268,13 @@
 				8A8823A41FC8806800BF2FED /* MainViewController.swift in Sources */,
 				8A8823C11FC89C4500BF2FED /* GoodTableViewCell.swift in Sources */,
 				8A8823CA1FC8A45D00BF2FED /* UIView+NibLoad.swift in Sources */,
+				8AB108F61FC97898001D0AA0 /* String+Substring.swift in Sources */,
 				8A566F131FC954EF0010B59A /* ContractViewController.swift in Sources */,
+				8AB108F41FC97882001D0AA0 /* UIColor+HexString.swift in Sources */,
 				8A8823BB1FC89A8900BF2FED /* GoodEntity.swift in Sources */,
 				8A8823A21FC8806800BF2FED /* AppDelegate.swift in Sources */,
+				8AB108EF1FC9735A001D0AA0 /* UIViewController+BackButton.swift in Sources */,
+				8AB108F11FC9736E001D0AA0 /* NavigationViewController.swift in Sources */,
 				8A8823B71FC897A900BF2FED /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
