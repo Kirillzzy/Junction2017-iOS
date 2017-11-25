@@ -437,8 +437,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+                DEVELOPMENT_TEAM = KH2KDZEEE3;
 				INFOPLIST_FILE = "Junction2017-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,8 +453,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+                DEVELOPMENT_TEAM = KH2KDZEEE3;
 				INFOPLIST_FILE = "Junction2017-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
