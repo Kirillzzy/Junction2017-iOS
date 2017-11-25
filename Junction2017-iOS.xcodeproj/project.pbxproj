@@ -36,7 +36,6 @@
 		8AB109161FC990D9001D0AA0 /* todayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AB109081FC990D9001D0AA0 /* todayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8AD6B66D1FC993D2000D55E8 /* GoodEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823BA1FC89A8900BF2FED /* GoodEntity.swift */; };
 		8AD6B66E1FC993E5000D55E8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823A31FC8806800BF2FED /* MainViewController.swift */; };
-		8AD6B66F1FC9945F000D55E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823A11FC8806800BF2FED /* AppDelegate.swift */; };
 		8AD6B6701FC994E6000D55E8 /* GoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823BF1FC89C4500BF2FED /* GoodTableViewCell.swift */; };
 		8AD6B6711FC994E6000D55E8 /* GoodTableViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8A8823C01FC89C4500BF2FED /* GoodTableViewCell.xib */; };
 		8AD6B6721FC99582000D55E8 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB108F71FC980FC001D0AA0 /* CustomTabBarController.swift */; };
@@ -52,6 +51,8 @@
 		8AD6B67F1FC99920000D55E8 /* TodayExtensionGoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */; };
 		8AD6B6801FC99920000D55E8 /* TodayExtensionGoodTableViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */; };
 		8AD6B6A51FC9C4BB000D55E8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B6A41FC9C4BB000D55E8 /* TabBarViewController.swift */; };
+		8AD6B6AD1FC9C79E000D55E8 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B6AC1FC9C79E000D55E8 /* IntentHandler.swift */; };
+		8AD6B6B11FC9C79E000D55E8 /* intentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AD6B6AA1FC9C79E000D55E8 /* intentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,13 @@
 			remoteGlobalIDString = 8AB109071FC990D9001D0AA0;
 			remoteInfo = todayExtension;
 		};
+		8AD6B6AF1FC9C79E000D55E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A8823961FC8806800BF2FED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AD6B6A91FC9C79E000D55E8;
+			remoteInfo = intentsExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				8AD6B6B11FC9C79E000D55E8 /* intentsExtension.appex in Embed App Extensions */,
 				8AB109161FC990D9001D0AA0 /* todayExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -112,6 +121,10 @@
 		8AD6B67B1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayExtensionGoodTableViewCell.swift; sourceTree = "<group>"; };
 		8AD6B67C1FC997B1000D55E8 /* TodayExtensionGoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayExtensionGoodTableViewCell.xib; sourceTree = "<group>"; };
 		8AD6B6A41FC9C4BB000D55E8 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8AD6B6AA1FC9C79E000D55E8 /* intentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = intentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD6B6AC1FC9C79E000D55E8 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		8AD6B6AE1FC9C79E000D55E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD6B6B51FC9C862000D55E8 /* Junction2017-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Junction2017-iOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +140,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB1090B1FC990D9001D0AA0 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD6B6A71FC9C79E000D55E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +176,7 @@
 			children = (
 				8A8823A01FC8806800BF2FED /* Junction2017-iOS */,
 				8AB1090C1FC990D9001D0AA0 /* todayExtension */,
+				8AD6B6AB1FC9C79E000D55E8 /* intentsExtension */,
 				8AB109091FC990D9001D0AA0 /* Frameworks */,
 				8A88239F1FC8806800BF2FED /* Products */,
 			);
@@ -166,6 +187,7 @@
 			children = (
 				8A88239E1FC8806800BF2FED /* Junction2017-iOS.app */,
 				8AB109081FC990D9001D0AA0 /* todayExtension.appex */,
+				8AD6B6AA1FC9C79E000D55E8 /* intentsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,8 +202,8 @@
 				8A8823B91FC89A6E00BF2FED /* Entities */,
 				8A8823B31FC880DB00BF2FED /* Storyboards */,
 				86B2E6E41FC9A95800355266 /* Libs */,
-				8A8823A81FC8806800BF2FED /* Assets.xcassets */,
-				8A8823AD1FC8806800BF2FED /* Info.plist */,
+				8AD6B6B71FC9C96B000D55E8 /* Assets */,
+				8AD6B6B61FC9C95A000D55E8 /* Config */,
 			);
 			path = "Junction2017-iOS";
 			sourceTree = "<group>";
@@ -309,6 +331,32 @@
 			path = TodayExtensionGoodTableViewCell;
 			sourceTree = "<group>";
 		};
+		8AD6B6AB1FC9C79E000D55E8 /* intentsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8AD6B6AC1FC9C79E000D55E8 /* IntentHandler.swift */,
+				8AD6B6AE1FC9C79E000D55E8 /* Info.plist */,
+			);
+			path = intentsExtension;
+			sourceTree = "<group>";
+		};
+		8AD6B6B61FC9C95A000D55E8 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8A8823AD1FC8806800BF2FED /* Info.plist */,
+				8AD6B6B51FC9C862000D55E8 /* Junction2017-iOS.entitlements */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		8AD6B6B71FC9C96B000D55E8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8A8823A81FC8806800BF2FED /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,6 +374,7 @@
 			);
 			dependencies = (
 				8AB109141FC990D9001D0AA0 /* PBXTargetDependency */,
+				8AD6B6B01FC9C79E000D55E8 /* PBXTargetDependency */,
 			);
 			name = "Junction2017-iOS";
 			productName = "Junction2017-iOS";
@@ -349,6 +398,23 @@
 			productReference = 8AB109081FC990D9001D0AA0 /* todayExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		8AD6B6A91FC9C79E000D55E8 /* intentsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD6B6B21FC9C79E000D55E8 /* Build configuration list for PBXNativeTarget "intentsExtension" */;
+			buildPhases = (
+				8AD6B6A61FC9C79E000D55E8 /* Sources */,
+				8AD6B6A71FC9C79E000D55E8 /* Frameworks */,
+				8AD6B6A81FC9C79E000D55E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = intentsExtension;
+			productName = intentsExtension;
+			productReference = 8AD6B6AA1FC9C79E000D55E8 /* intentsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -362,8 +428,17 @@
 					8A88239D1FC8806800BF2FED = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 					8AB109071FC990D9001D0AA0 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8AD6B6A91FC9C79E000D55E8 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -384,6 +459,7 @@
 			targets = (
 				8A88239D1FC8806800BF2FED /* Junction2017-iOS */,
 				8AB109071FC990D9001D0AA0 /* todayExtension */,
+				8AD6B6A91FC9C79E000D55E8 /* intentsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -410,6 +486,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB109111FC990D9001D0AA0 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD6B6A81FC9C79E000D55E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,10 +556,17 @@
 				8AD6B6721FC99582000D55E8 /* CustomTabBarController.swift in Sources */,
 				8AD6B6701FC994E6000D55E8 /* GoodTableViewCell.swift in Sources */,
 				8AD6B6711FC994E6000D55E8 /* GoodTableViewCell.xib in Sources */,
-				8AD6B66F1FC9945F000D55E8 /* AppDelegate.swift in Sources */,
 				8AD6B66E1FC993E5000D55E8 /* MainViewController.swift in Sources */,
 				8AD6B66D1FC993D2000D55E8 /* GoodEntity.swift in Sources */,
 				8AB1090E1FC990D9001D0AA0 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD6B6A61FC9C79E000D55E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD6B6AD1FC9C79E000D55E8 /* IntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +577,11 @@
 			isa = PBXTargetDependency;
 			target = 8AB109071FC990D9001D0AA0 /* todayExtension */;
 			targetProxy = 8AB109131FC990D9001D0AA0 /* PBXContainerItemProxy */;
+		};
+		8AD6B6B01FC9C79E000D55E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AD6B6A91FC9C79E000D55E8 /* intentsExtension */;
+			targetProxy = 8AD6B6AF1FC9C79E000D55E8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -630,12 +725,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Junction2017-iOS/Config/Junction2017-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KH2KDZEEE3;
-				INFOPLIST_FILE = "Junction2017-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Junction2017-iOS/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -647,12 +743,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Junction2017-iOS/Config/Junction2017-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KH2KDZEEE3;
-				INFOPLIST_FILE = "Junction2017-iOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Junction2017-iOS/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -667,7 +764,7 @@
 				INFOPLIST_FILE = todayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS.todayExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction.todayExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -683,7 +780,39 @@
 				INFOPLIST_FILE = todayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.Junction2017-iOS.todayExtension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction.todayExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8AD6B6B31FC9C79E000D55E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				INFOPLIST_FILE = intentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction.intentsExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8AD6B6B41FC9C79E000D55E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				INFOPLIST_FILE = intentsExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction.intentsExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -717,6 +846,15 @@
 			buildConfigurations = (
 				8AB109181FC990D9001D0AA0 /* Debug */,
 				8AB109191FC990D9001D0AA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD6B6B21FC9C79E000D55E8 /* Build configuration list for PBXNativeTarget "intentsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD6B6B31FC9C79E000D55E8 /* Debug */,
+				8AD6B6B41FC9C79E000D55E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

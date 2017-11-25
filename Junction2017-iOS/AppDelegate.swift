@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    requestAuthorisation()
     return true
   }
 
@@ -28,6 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.rootViewController
       = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
     return true
+  }
+
+  private func requestAuthorisation() {
+    INPreferences.requestSiriAuthorization { status in
+      if status == .authorized {
+        print("Siri authorized")
+      } else {
+        print("Siri authorization failed")
+      }
+    }
   }
 }
 
