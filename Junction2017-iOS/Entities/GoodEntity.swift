@@ -11,5 +11,28 @@ import UIKit
 struct GoodEntity {
   let id: Int
   let company: String
-  let status: String // FIXME: - add enum with real cases
+
+  enum StatusType {
+    case delivered
+    case undelivered
+
+    var title: String {
+      switch self {
+      case .delivered:
+        return "Delivered"
+      case .undelivered:
+        return "Undelivered"
+      }
+    }
+
+    var titleColor: UIColor {
+      switch self {
+      case .delivered:
+        return UIColor(hexString: "4DD964") // green
+      case .undelivered:
+        return UIColor(hexString: "969696") // gray
+      }
+    }
+  }
+  var status: StatusType
 }

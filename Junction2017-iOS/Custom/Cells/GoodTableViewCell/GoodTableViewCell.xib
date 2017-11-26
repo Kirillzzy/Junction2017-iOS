@@ -4,9 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="342" height="88.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-qP-ClH">
-                                <rect key="frame" x="16" y="87.5" width="34" height="23.5"/>
+                                <rect key="frame" x="16" y="87.5" width="15.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,7 +43,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Izw-JL-sCq">
-                                <rect key="frame" x="120.5" y="8" width="103" height="31.5"/>
+                                <rect key="frame" x="119.5" y="8" width="103" height="31.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
                                 <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -62,7 +60,6 @@
                             <constraint firstItem="NZx-qP-ClH" firstAttribute="leading" secondItem="sLV-z8-eUo" secondAttribute="leading" constant="16" id="XmP-5z-v4i"/>
                             <constraint firstItem="Izw-JL-sCq" firstAttribute="top" secondItem="sLV-z8-eUo" secondAttribute="top" constant="8" id="Xuv-ys-VbE"/>
                             <constraint firstAttribute="trailing" secondItem="WOC-ba-mC4" secondAttribute="trailing" constant="16" id="gDK-q5-W1h"/>
-                            <constraint firstItem="NZx-qP-ClH" firstAttribute="width" secondItem="sLV-z8-eUo" secondAttribute="width" multiplier="0.1" id="la5-FS-GkC"/>
                             <constraint firstAttribute="trailing" secondItem="D9Q-jy-aKT" secondAttribute="trailing" id="qYq-WA-FPo"/>
                             <constraint firstAttribute="bottom" secondItem="NZx-qP-ClH" secondAttribute="bottom" constant="8" id="v5k-UX-y3H"/>
                         </constraints>

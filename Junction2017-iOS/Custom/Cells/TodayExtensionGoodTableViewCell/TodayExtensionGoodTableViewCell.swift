@@ -16,7 +16,7 @@ class TodayExtensionGoodTableViewCell: UITableViewCell {
   func configure(with entity: GoodEntity) {
     secondLabel.text = "№ " + String(describing: entity.id) // + "."
     firstLabel.text = entity.company
-    thirdLabel.text = entity.status
+    thirdLabel.text = entity.status.title
   }
 
   override func awakeFromNib() {

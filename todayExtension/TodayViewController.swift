@@ -16,14 +16,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
   var displayMode: NCWidgetDisplayMode!
   var goodEntities: [GoodEntity] {
     var goods = [GoodEntity]()
-    goods.append(GoodEntity(id: 0, company: "MAZA RUSSIA", status: "Great"))
-    goods.append(GoodEntity(id: 1, company: "Finland", status: "Bad"))
-    goods.append(GoodEntity(id: 2, company: "Big Good", status: "Suspended"))
-    goods.append(GoodEntity(id: 3, company: "Like a Boss", status: "Great"))
-    goods.append(GoodEntity(id: 4, company: "MAZA RUSSIA", status: "Great"))
-    goods.append(GoodEntity(id: 5, company: "Finland", status: "Bad"))
-    goods.append(GoodEntity(id: 6, company: "Big Good", status: "Suspended"))
-    goods.append(GoodEntity(id: 7, company: "Like a Boss", status: "Great"))
+    goods.append(GoodEntity(id: 153624, company: "Johnson & Johnson", status: .delivered))
+    goods.append(GoodEntity(id: 192390, company: "Junction Flowers Inc", status: .undelivered))
+    goods.append(GoodEntity(id: 123945, company: "Junction Flowers Inc", status: .undelivered))
+    goods.append(GoodEntity(id: 873268, company: "Apple Inc", status: .delivered))
+    goods.append(GoodEntity(id: 120392, company: "Johnson & Johnson", status: .undelivered))
+    goods.append(GoodEntity(id: 234899, company: "Ferrari", status: .delivered))
+    goods.append(GoodEntity(id: 937928, company: "Junction Flowers Inc", status: .delivered))
+    goods.append(GoodEntity(id: 348959, company: "Johnson & Johnson", status: .undelivered))
     return goods
   }
 

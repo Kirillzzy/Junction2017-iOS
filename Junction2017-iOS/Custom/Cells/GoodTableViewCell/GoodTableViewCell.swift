@@ -21,7 +21,8 @@ class GoodTableViewCell: UITableViewCell {
   func configure(with entity: GoodEntity) {
     idLabel.text = "№ " + String(describing: entity.id) // + "."
     companyLabel.text = entity.company
-    statusLabel.text = entity.status
+    statusLabel.text = entity.status.title
+    statusLabel.textColor = entity.status.titleColor
   }
 
   override func awakeFromNib() {
