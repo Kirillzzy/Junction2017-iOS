@@ -8,20 +8,21 @@
 
 import UIKit
 
+var goodEntities: [GoodEntity] {
+  var goods = [GoodEntity]()
+  goods.append(GoodEntity(id: 153624, company: "Johnson & Johnson", status: .delivered))
+  goods.append(GoodEntity(id: 192390, company: "Junction Flowers Inc", status: .undelivered))
+  goods.append(GoodEntity(id: 123945, company: "Junction Flowers Inc", status: .undelivered))
+  goods.append(GoodEntity(id: 873268, company: "Apple Inc", status: .delivered))
+  goods.append(GoodEntity(id: 120392, company: "Johnson & Johnson", status: .undelivered))
+  goods.append(GoodEntity(id: 234899, company: "Ferrari", status: .delivered))
+  goods.append(GoodEntity(id: 937928, company: "Junction Flowers Inc", status: .delivered))
+  goods.append(GoodEntity(id: 348959, company: "Johnson & Johnson", status: .undelivered))
+  return goods
+}
+
 class MainViewController: UIViewController {
   @IBOutlet var tableView: UITableView!
-  var goodEntities: [GoodEntity] {
-    var goods = [GoodEntity]()
-    goods.append(GoodEntity(id: 153624, company: "Johnson & Johnson", status: .delivered))
-    goods.append(GoodEntity(id: 192390, company: "Junction Flowers Inc", status: .undelivered))
-    goods.append(GoodEntity(id: 123945, company: "Junction Flowers Inc", status: .undelivered))
-    goods.append(GoodEntity(id: 873268, company: "Apple Inc", status: .delivered))
-    goods.append(GoodEntity(id: 120392, company: "Johnson & Johnson", status: .undelivered))
-    goods.append(GoodEntity(id: 234899, company: "Ferrari", status: .delivered))
-    goods.append(GoodEntity(id: 937928, company: "Junction Flowers Inc", status: .delivered))
-    goods.append(GoodEntity(id: 348959, company: "Johnson & Johnson", status: .undelivered))
-    return goods
-  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
