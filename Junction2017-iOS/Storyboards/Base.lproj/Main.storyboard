@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vlh-8P-7YZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vlh-8P-7YZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,7 +96,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fA2-ba-ftn">
-                                <rect key="frame" x="8" y="80" width="359" height="146.5"/>
+                                <rect key="frame" x="8" y="80" width="359" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="x8a-QT-NMC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,16 +125,17 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperature1" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-t6-hOU">
-                                <rect key="frame" x="0.0" y="242.5" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="276" width="375" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="Mfg-tJ-m14"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Aap-t6-hOU" firstAttribute="leading" secondItem="kse-HD-Iwk" secondAttribute="leading" id="151-OB-hha"/>
-                            <constraint firstItem="fA2-ba-ftn" firstAttribute="height" secondItem="cRb-I2-PQZ" secondAttribute="height" multiplier="0.22" id="5XX-if-b4O"/>
                             <constraint firstItem="kse-HD-Iwk" firstAttribute="trailing" secondItem="fA2-ba-ftn" secondAttribute="trailing" constant="8" id="DSj-7T-Z2Y"/>
                             <constraint firstItem="kse-HD-Iwk" firstAttribute="trailing" secondItem="Aap-t6-hOU" secondAttribute="trailing" id="Do1-Yu-GNY"/>
-                            <constraint firstItem="Aap-t6-hOU" firstAttribute="height" secondItem="cRb-I2-PQZ" secondAttribute="height" multiplier="0.4" id="GlQ-nk-qul"/>
                             <constraint firstItem="kse-HD-Iwk" firstAttribute="bottom" secondItem="5RX-kq-OWv" secondAttribute="bottom" constant="31" id="JDy-iL-q8H"/>
                             <constraint firstItem="fA2-ba-ftn" firstAttribute="leading" secondItem="kse-HD-Iwk" secondAttribute="leading" constant="8" id="gcW-fD-7Tg"/>
                             <constraint firstItem="5RX-kq-OWv" firstAttribute="centerX" secondItem="kse-HD-Iwk" secondAttribute="centerX" id="htd-4x-4tb"/>
