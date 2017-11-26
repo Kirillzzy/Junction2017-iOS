@@ -45,7 +45,7 @@ class TabBarItemView: CustomTabBarItemView {
     var color: UIColor {
       switch self {
       case .selected:
-        return UIColor(hexString: "C70FEE")
+        return UIColor(hexString: "0070FF")
       case .unselected:
         return UIColor(hexString: "8C8C8C")
       }
