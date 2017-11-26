@@ -39,7 +39,7 @@ class ContractViewController: UIViewController {
   ]
   let companies = [
     "Johnson & Johnson": "0x6a175cdcce90f7cf2dcbfc16257989f0d1d5f553",
-    "Junction Flowers Inc.": "0x2ac5d7e4e2e23679de963c0cb098741a38221d1d"
+    "Junction Flowers Inc": "0x2ac5d7e4e2e23679de963c0cb098741a38221d1d"
   ]
   let cargos = [
     "Red Tulip": 0,
@@ -58,13 +58,12 @@ class ContractViewController: UIViewController {
     var parts = scannedQrString.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
     // Workaround for wrong QR code :(
     if scannedQrString.starts(with: "Johnson & Johnson") {
-      parts.swapAt(0, 1)
       parts[0] = parts[0].capitalized
     }
 
-    cargoId = cargos[parts[0]]
-    cargoInfo = (name: parts[0], company: parts[1])
-    companyAddress = companies[parts[1]]
+    cargoId = cargos[parts[1]]
+    cargoInfo = (name: parts[1], company: parts[0])
+    companyAddress = companies[parts[0]]
     workerAddress = workers[0]
     guard cargoId != nil, companyAddress != nil, workerAddress != nil else {
       print("invalid ids")
