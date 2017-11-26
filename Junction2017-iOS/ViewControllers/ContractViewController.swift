@@ -47,7 +47,9 @@ class ContractViewController: UIViewController {
   ]
   
   @IBAction func onDoneButtonClick(_ sender: Any) {
-    UIApplication.shared.delegate?.window??.rootViewController = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
+    AppDelegate.selectedBarIndex = 0
+    UIApplication.shared.delegate?.window??.rootViewController
+      = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
   }
 
   override func viewDidLoad() {
