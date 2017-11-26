@@ -8,15 +8,63 @@
 
 import UIKit
 import WebKit
+import PromiseKit
+
+enum CargoStatus: Int {
+  case inactive, inDelivery, damaged, delivered, checked
+}
 
 class ContractViewController: UIViewController {
   @IBOutlet var mainLabel: UILabel!
   var managedWebView: WKWebView?
   var scannedQrString: String!
-
+  var companyAddress: String!
+  var workerAddress: String!
+  var cargoId: Int!
+  
+  // Prevent getCargoStatus async execution
+  var group = DispatchGroup()
+  var statusInfo: Any?
+  
+  // Hardcode
+  let workers = ["0xe8e9e107037595ec64f032a57a354524911a349e", "0xea63073fbc90d8493812b0e59a85528e60b21711"]
+  let places = [
+    "Greece": 0,
+    "Holland": 1,
+    "Germany": 2,
+    "Spain": 3
+  ]
+  let companies = [
+    "Johnson & Johnson": "0x6a175cdcce90f7cf2dcbfc16257989f0d1d5f553",
+    "Junction Flowers Inc.": "0x2ac5d7e4e2e23679de963c0cb098741a38221d1d"
+  ]
+  let cargos = [
+    "Red Tulip": 0,
+    "Pharmacy": 1
+  ]
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    mainLabel.text = scannedQrString
+    
+    var parts = scannedQrString.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
+    
+    // Workaround for wrong QR code :(
+    if scannedQrString.starts(with: "Johnson & Johnson") {
+      parts.swapAt(0, 1)
+      parts[0] = parts[0].capitalized
+    }
+    
+    mainLabel.text = "\(parts[0]) by \(parts[1])"
+    
+    cargoId = cargos[parts[0]]
+    companyAddress = companies[parts[1]]
+    workerAddress = workers[0]
+    
+    guard cargoId != nil, companyAddress != nil, workerAddress != nil else {
+      print("invalid ids")
+      return
+    }
+    
     managedWebView = WKWebView()
     guard let managedWebView = managedWebView else {
       print("Unable to init web view for web3")
@@ -38,6 +86,87 @@ extension ContractViewController: WKNavigationDelegate {
     print("Error during navigation: \(error)")
   }
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    print("Completed")
+    webView.evaluateJavaScript("web3.isConnected()", completionHandler: { res, error in
+      if let connected = res as? Int, connected == 1 {
+        print("connected to ethereum node")
+        
+        self.getCargoInfo(id: self.cargoId).then { res -> Promise<Any?> in
+          if let res = res as? NSDictionary,
+            let someArray = res["c"] as? NSArray,
+            let value = someArray[0] as? Int,
+            let status = CargoStatus(rawValue: value) {
+            switch status {
+            case .inDelivery:
+              return self.makeCargoDelivered(company: self.companyAddress, worker: self.workerAddress, cargoId: self.cargoId)
+            default:
+              return self.setCargoToDelivery(company: self.companyAddress, worker: self.workerAddress, cargoId: self.cargoId)
+            }
+          } else {
+            throw NSError() // just jump to catch block
+          }
+        }.then { res -> Void in
+          print("transaction: \(res)")
+        }.catch { error in
+          print("error: \(error)")
+        }
+      } else {
+        print("unable to connect to the node, error = \(error?.localizedDescription ?? "nil")")
+      }
+    })
+  }
+}
+
+// MARK: - Contract interface
+extension ContractViewController {
+  typealias Address = String
+  
+  func makeCargoDelivered(company: Address, worker: Address, cargoId: Int) -> Promise<Any?> {
+    return Promise { fulfill, reject in
+      self.managedWebView?.evaluateJavaScript("TrackTruck.makeCargoDelivered(\"\(company)\", \"\(worker)\", \"\(cargoId)\")", completionHandler: { res, error in
+        if let res = res {
+          print("res: \(res)")
+          fulfill(res)
+        } else {
+          print("error: \(error?.localizedDescription ?? "nil")")
+          reject(error ?? NSError())
+        }
+      })
+    }
+  }
+  
+  func setCargoToDelivery(company: Address, worker: Address, cargoId: Int) -> Promise<Any?> {
+    return Promise { fulfill, reject in
+      self.managedWebView?.evaluateJavaScript("TrackTruck.setCargoToDelivery(\"\(company)\", \"\(worker)\", \"\(cargoId)\")", completionHandler: { res, error in
+        if let res = res {
+          print("res: \(res)")
+          fulfill(res)
+        } else {
+          print("error: \(error?.localizedDescription ?? "nil")")
+          reject(error ?? NSError())
+        }
+      })
+    }
+  }
+  
+  func getCargoInfo(id: Int) -> Promise<Any?> {
+    return Promise { fulfill, reject in
+      self.managedWebView?.configuration.userContentController.add(self, name: "handler")
+      self.statusInfo = nil
+      
+      self.group.enter()
+      self.managedWebView?.evaluateJavaScript("TrackTruck.getCargoStatus.call(\(id), function(err, res) { window.webkit.messageHandlers[\"handler\"].postMessage(res); })", completionHandler: { res, error in
+      })
+      group.notify(queue: .main) {
+        fulfill(self.statusInfo)
+      }
+    }
+  }
+}
+
+extension ContractViewController: WKScriptMessageHandler {
+  func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    statusInfo = message.body
+    managedWebView?.configuration.userContentController.removeScriptMessageHandler(forName: "handler")
+    group.leave()
   }
 }

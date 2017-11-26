@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		675227EA602BC4F79DACC3BC /* Pods_Junction2017_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B305DBFFCDA96368A22DABE4 /* Pods_Junction2017_iOS.framework */; };
 		86B2E6E81FC9A98400355266 /* web3.html in Resources */ = {isa = PBXBuildFile; fileRef = 86B2E6E61FC9A98400355266 /* web3.html */; };
 		86B2E6E91FC9A98400355266 /* web3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 86B2E6E71FC9A98400355266 /* web3.min.js */; };
 		8A566F131FC954EF0010B59A /* ContractViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A566F121FC954EF0010B59A /* ContractViewController.swift */; };
@@ -53,6 +54,7 @@
 		8AD6B6A51FC9C4BB000D55E8 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B6A41FC9C4BB000D55E8 /* TabBarViewController.swift */; };
 		8AD6B6AD1FC9C79E000D55E8 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6B6AC1FC9C79E000D55E8 /* IntentHandler.swift */; };
 		8AD6B6B11FC9C79E000D55E8 /* intentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8AD6B6AA1FC9C79E000D55E8 /* intentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FE5FB28E1551DF0A8DD6FAE4 /* Pods_todayExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802F6CADE17DEA30542F5D3C /* Pods_todayExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0547A4E8E855F425B1E34ADB /* Pods-Junction2017-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junction2017-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Junction2017-iOS/Pods-Junction2017-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4D8D1D5B111E7BD11ED08C04 /* Pods-todayExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todayExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-todayExtension/Pods-todayExtension.release.xcconfig"; sourceTree = "<group>"; };
+		802F6CADE17DEA30542F5D3C /* Pods_todayExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_todayExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B2E6E61FC9A98400355266 /* web3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = web3.html; path = "Junction2017-iOS/Libs/Web3/web3.html"; sourceTree = SOURCE_ROOT; };
 		86B2E6E71FC9A98400355266 /* web3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = web3.min.js; path = "Junction2017-iOS/Libs/Web3/web3.min.js"; sourceTree = SOURCE_ROOT; };
 		8A566F121FC954EF0010B59A /* ContractViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +130,9 @@
 		8AD6B6AC1FC9C79E000D55E8 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		8AD6B6AE1FC9C79E000D55E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AD6B6B51FC9C862000D55E8 /* Junction2017-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Junction2017-iOS.entitlements"; sourceTree = "<group>"; };
+		B305DBFFCDA96368A22DABE4 /* Pods_Junction2017_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Junction2017_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66D596F1E806D6995030365 /* Pods-todayExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todayExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-todayExtension/Pods-todayExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		FFB9077640F462C5F42E8B15 /* Pods-Junction2017-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Junction2017-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Junction2017-iOS/Pods-Junction2017-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				675227EA602BC4F79DACC3BC /* Pods_Junction2017_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB1090B1FC990D9001D0AA0 /* NotificationCenter.framework in Frameworks */,
+				FE5FB28E1551DF0A8DD6FAE4 /* Pods_todayExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +189,7 @@
 				8AD6B6AB1FC9C79E000D55E8 /* intentsExtension */,
 				8AB109091FC990D9001D0AA0 /* Frameworks */,
 				8A88239F1FC8806800BF2FED /* Products */,
+				A6AAE5F049A14A0FBFFE9A9F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,6 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				8AB1090A1FC990D9001D0AA0 /* NotificationCenter.framework */,
+				B305DBFFCDA96368A22DABE4 /* Pods_Junction2017_iOS.framework */,
+				802F6CADE17DEA30542F5D3C /* Pods_todayExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -357,6 +370,17 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		A6AAE5F049A14A0FBFFE9A9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFB9077640F462C5F42E8B15 /* Pods-Junction2017-iOS.debug.xcconfig */,
+				0547A4E8E855F425B1E34ADB /* Pods-Junction2017-iOS.release.xcconfig */,
+				D66D596F1E806D6995030365 /* Pods-todayExtension.debug.xcconfig */,
+				4D8D1D5B111E7BD11ED08C04 /* Pods-todayExtension.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,11 +388,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A8823B01FC8806800BF2FED /* Build configuration list for PBXNativeTarget "Junction2017-iOS" */;
 			buildPhases = (
+				CEB60D1C4767354662B3FB15 /* [CP] Check Pods Manifest.lock */,
 				8A88239A1FC8806800BF2FED /* Sources */,
 				8A88239B1FC8806800BF2FED /* Frameworks */,
 				8A88239C1FC8806800BF2FED /* Resources */,
 				8A8823B51FC8815C00BF2FED /* Swiftlint */,
 				8AB109151FC990D9001D0AA0 /* Embed App Extensions */,
+				34682AFB7B7B01E635A5C400 /* [CP] Embed Pods Frameworks */,
+				5449A6A2777DD9DF44CF9895 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,9 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AB109171FC990D9001D0AA0 /* Build configuration list for PBXNativeTarget "todayExtension" */;
 			buildPhases = (
+				DA1152D8F37D104D0C68998B /* [CP] Check Pods Manifest.lock */,
 				8AB109041FC990D9001D0AA0 /* Sources */,
 				8AB109051FC990D9001D0AA0 /* Frameworks */,
 				8AB109061FC990D9001D0AA0 /* Resources */,
+				308891D2BD5EB99EC1436851 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,6 +528,54 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		308891D2BD5EB99EC1436851 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-todayExtension/Pods-todayExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34682AFB7B7B01E635A5C400 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Junction2017-iOS/Pods-Junction2017-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Junction2017-iOS/Pods-Junction2017-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5449A6A2777DD9DF44CF9895 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Junction2017-iOS/Pods-Junction2017-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8A8823B51FC8815C00BF2FED /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,6 +589,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		CEB60D1C4767354662B3FB15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Junction2017-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA1152D8F37D104D0C68998B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-todayExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -661,7 +774,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -712,7 +825,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -722,14 +835,15 @@
 		};
 		8A8823B11FC8806800BF2FED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFB9077640F462C5F42E8B15 /* Pods-Junction2017-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Junction2017-iOS/Config/Junction2017-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				DEVELOPMENT_TEAM = 7S8Z9T8WFU;
 				INFOPLIST_FILE = "$(SRCROOT)/Junction2017-iOS/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -740,14 +854,15 @@
 		};
 		8A8823B21FC8806800BF2FED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0547A4E8E855F425B1E34ADB /* Pods-Junction2017-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Junction2017-iOS/Config/Junction2017-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				DEVELOPMENT_TEAM = 7S8Z9T8WFU;
 				INFOPLIST_FILE = "$(SRCROOT)/Junction2017-iOS/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -758,9 +873,10 @@
 		};
 		8AB109181FC990D9001D0AA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D66D596F1E806D6995030365 /* Pods-todayExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				DEVELOPMENT_TEAM = 7S8Z9T8WFU;
 				INFOPLIST_FILE = todayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -774,9 +890,10 @@
 		};
 		8AB109191FC990D9001D0AA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D8D1D5B111E7BD11ED08C04 /* Pods-todayExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				DEVELOPMENT_TEAM = 7S8Z9T8WFU;
 				INFOPLIST_FILE = todayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -792,9 +909,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				DEVELOPMENT_TEAM = 7S8Z9T8WFU;
 				INFOPLIST_FILE = intentsExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction.intentsExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -808,9 +925,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KH2KDZEEE3;
+				DEVELOPMENT_TEAM = 7S8Z9T8WFU;
 				INFOPLIST_FILE = intentsExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kirillzzy.tracktruck-junction.intentsExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
