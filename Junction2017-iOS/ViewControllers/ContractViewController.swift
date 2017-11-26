@@ -93,9 +93,19 @@ class ContractViewController: UIViewController {
       KRProgressHUD.set(style: .black).showSuccess()
       switch self.newStatus ?? .inDelivery {
       case .delivered:
-        self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
+        self.mainLabel.text =
+        """
+        Cargo: \(self.cargoInfo.name)
+        Company: \(self.cargoInfo.company)
+        Status: Delivered
+        """
       default:
-        self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) in delivery"
+        self.mainLabel.text =
+        """
+        Cargo: \(self.cargoInfo.name)
+        Company: \(self.cargoInfo.company)
+        Status: In delivery
+        """
       }
 //      DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
 //        UIApplication.shared.delegate?.window??.rootViewController
