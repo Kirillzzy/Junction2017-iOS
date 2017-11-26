@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vlh-8P-7YZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vlh-8P-7YZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -102,12 +102,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RX-kq-OWv">
+                                <rect key="frame" x="47" y="398" width="280" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5Kf-qW-NeB"/>
+                                    <constraint firstAttribute="width" constant="280" id="AOC-aG-PYd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onDoneButtonClick:" destination="PGr-1t-5lW" eventType="touchUpInside" id="nHi-A5-FPq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5RX-kq-OWv" firstAttribute="top" secondItem="fA2-ba-ftn" secondAttribute="bottom" constant="67" id="7cN-8f-jPI"/>
                             <constraint firstItem="kse-HD-Iwk" firstAttribute="trailing" secondItem="fA2-ba-ftn" secondAttribute="trailing" constant="8" id="DSj-7T-Z2Y"/>
                             <constraint firstItem="fA2-ba-ftn" firstAttribute="leading" secondItem="kse-HD-Iwk" secondAttribute="leading" constant="8" id="gcW-fD-7Tg"/>
                             <constraint firstItem="fA2-ba-ftn" firstAttribute="height" secondItem="cRb-I2-PQZ" secondAttribute="height" multiplier="0.4" id="gpK-Hj-vsg"/>
+                            <constraint firstItem="5RX-kq-OWv" firstAttribute="centerX" secondItem="kse-HD-Iwk" secondAttribute="centerX" id="htd-4x-4tb"/>
                             <constraint firstItem="fA2-ba-ftn" firstAttribute="top" secondItem="kse-HD-Iwk" secondAttribute="top" id="s8f-MW-B5y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kse-HD-Iwk"/>

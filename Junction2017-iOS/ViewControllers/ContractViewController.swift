@@ -23,9 +23,12 @@ class ContractViewController: UIViewController {
   var workerAddress: String!
   var cargoId: Int!
   var cargoInfo: (name: String, company: String)!
+
   // Prevent getCargoStatus async execution
   var group = DispatchGroup()
   var statusInfo: Any?
+  var newStatus: CargoStatus?
+
   // Hardcode
   let workers = ["0xe8e9e107037595ec64f032a57a354524911a349e", "0xea63073fbc90d8493812b0e59a85528e60b21711"]
   let places = [
@@ -42,6 +45,11 @@ class ContractViewController: UIViewController {
     "Red Tulip": 0,
     "Pharmacy": 1
   ]
+  
+  @IBAction func onDoneButtonClick(_ sender: Any) {
+    UIApplication.shared.delegate?.window??.rootViewController = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     var parts = scannedQrString.split(separator: ",").map { $0.trimmingCharacters(in: .whitespaces) }
@@ -50,7 +58,7 @@ class ContractViewController: UIViewController {
       parts.swapAt(0, 1)
       parts[0] = parts[0].capitalized
     }
-//    mainLabel.text = "\(parts[0]) by \(parts[1])"
+
     cargoId = cargos[parts[0]]
     cargoInfo = (name: parts[0], company: parts[1])
     companyAddress = companies[parts[1]]
@@ -59,11 +67,13 @@ class ContractViewController: UIViewController {
       print("invalid ids")
       return
     }
+
     managedWebView = WKWebView()
     guard let managedWebView = managedWebView else {
       print("Unable to init web view for web3")
       return
     }
+
     managedWebView.navigationDelegate = self
     view.addSubview(managedWebView)
     guard let htmlFile = Bundle.main.path(forResource: "web3", ofType: "html"),
@@ -71,19 +81,24 @@ class ContractViewController: UIViewController {
       print("Unable to load web3 html file")
       return
     }
+
     managedWebView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
     KRProgressHUD.set(style: .black).show()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in self?.succed() })
   }
 
-  private func succed() {
+  private func succeed() {
     DispatchQueue.main.async { [unowned self] in
       KRProgressHUD.set(style: .black).showSuccess()
-      self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
-      DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-        UIApplication.shared.delegate?.window??.rootViewController
-          = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
-      })
+      switch self.newStatus ?? .inDelivery {
+      case .delivered:
+        self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
+      default:
+        self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) in delivery"
+      }
+//      DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+//        UIApplication.shared.delegate?.window??.rootViewController
+//          = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
+//      })
     }
   }
 }
@@ -92,6 +107,7 @@ extension ContractViewController: WKNavigationDelegate {
   func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
     print("Error during navigation: \(error)")
   }
+
   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     webView.evaluateJavaScript("web3.isConnected()", completionHandler: { res, error in
       if let connected = res as? Int, connected == 1 {
@@ -103,10 +119,12 @@ extension ContractViewController: WKNavigationDelegate {
             let status = CargoStatus(rawValue: value) {
             switch status {
             case .inDelivery:
+              self.newStatus = .delivered
               return self.makeCargoDelivered(company: self.companyAddress,
                                              worker: self.workerAddress,
                                              cargoId: self.cargoId)
             default:
+              self.newStatus = .inDelivery
               return self.setCargoToDelivery(company: self.companyAddress,
                                              worker: self.workerAddress,
                                              cargoId: self.cargoId)
@@ -115,7 +133,7 @@ extension ContractViewController: WKNavigationDelegate {
             throw NSError() // just jump to catch block
           }
         }.then { [weak self] res -> Void in
-          self?.succed()
+          self?.succeed()
           print("transaction: \(String(describing: res))")
         }.catch { error in
           print("error: \(error)")
@@ -144,6 +162,7 @@ extension ContractViewController {
       })
     }
   }
+
   func setCargoToDelivery(company: Address, worker: Address, cargoId: Int) -> Promise<Any?> {
     return Promise { fulfill, reject in
       // swiftlint:disable:next line_length
@@ -158,6 +177,7 @@ extension ContractViewController {
       })
     }
   }
+
   func getCargoInfo(id: Int) -> Promise<Any?> {
     return Promise { fulfill, _ in
       self.managedWebView?.configuration.userContentController.add(self, name: "handler")
