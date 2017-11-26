@@ -94,11 +94,21 @@ class ContractViewController: UIViewController {
       KRProgressHUD.set(style: .black).showSuccess()
       switch self.newStatus ?? .inDelivery {
       case .delivered:
-        self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
+        self.mainLabel.text =
+        """
+        Cargo: \(self.cargoInfo.name)
+        Company: \(self.cargoInfo.company)
+        Status: Delivered
+        """
         self.graph.isHidden = false
         self.graph.image = #imageLiteral(resourceName: "shaking2")
       default:
-        self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) in delivery"
+        self.mainLabel.text =
+        """
+        Cargo: \(self.cargoInfo.name)
+        Company: \(self.cargoInfo.company)
+        Status: In delivery
+        """
         self.graph.isHidden = true
       }
 //      DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
