@@ -49,7 +49,8 @@ class ContractViewController: UIViewController {
   @IBOutlet weak var graph: UIImageView!
   @IBAction func onDoneButtonClick(_ sender: Any) {
     AppDelegate.selectedBarIndex = 0
-    UIApplication.shared.delegate?.window??.rootViewController = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
+    UIApplication.shared.delegate?.window??.rootViewController
+      = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
   }
 
   override func viewDidLoad() {
