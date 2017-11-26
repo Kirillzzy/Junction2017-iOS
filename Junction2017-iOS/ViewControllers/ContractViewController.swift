@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import PromiseKit
+import KRProgressHUD
 
 enum CargoStatus: Int {
   case inactive, inDelivery, damaged, delivered, checked
@@ -21,6 +22,7 @@ class ContractViewController: UIViewController {
   var companyAddress: String!
   var workerAddress: String!
   var cargoId: Int!
+  var cargoInfo: (name: String, company: String)!
   // Prevent getCargoStatus async execution
   var group = DispatchGroup()
   var statusInfo: Any?
@@ -48,8 +50,9 @@ class ContractViewController: UIViewController {
       parts.swapAt(0, 1)
       parts[0] = parts[0].capitalized
     }
-    mainLabel.text = "\(parts[0]) by \(parts[1])"
+//    mainLabel.text = "\(parts[0]) by \(parts[1])"
     cargoId = cargos[parts[0]]
+    cargoInfo = (name: parts[0], company: parts[1])
     companyAddress = companies[parts[1]]
     workerAddress = workers[0]
     guard cargoId != nil, companyAddress != nil, workerAddress != nil else {
@@ -69,6 +72,7 @@ class ContractViewController: UIViewController {
       return
     }
     managedWebView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
+    KRProgressHUD.set(style: .black).show()
   }
 }
 
@@ -99,6 +103,10 @@ extension ContractViewController: WKNavigationDelegate {
             throw NSError() // just jump to catch block
           }
         }.then { res -> Void in
+          DispatchQueue.main.async { [unowned self] in
+            KRProgressHUD.set(style: .black).showSuccess()
+            self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
+          }
           print("transaction: \(String(describing: res))")
         }.catch { error in
           print("error: \(error)")

@@ -7,6 +7,7 @@ target 'Junction2017-iOS' do
 
   # Pods for Junction2017-iOS
   pod "PromiseKit", "~> 4.4"
+  pod "KRProgressHUD"
 end
 
 target 'todayExtension' do

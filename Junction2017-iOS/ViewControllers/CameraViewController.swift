@@ -73,6 +73,6 @@ class CameraViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     guard let presentViewController = mainStoryboad.instantiateViewController(withIdentifier: "ContractViewController")
       as? ContractViewController else { return }
     presentViewController.scannedQrString = stringCode
-    navigationController?.pushViewController(presentViewController, animated: true)
+    present(presentViewController, animated: true, completion: nil)
   }
 }
