@@ -178,6 +178,21 @@ extension ContractViewController {
     }
   }
 
+  func setCargoToDamaged(company: Address, worker: Address, cargoId: Int) -> Promise<Any?> {
+    return Promise { fulfill, reject in
+      // swiftlint:disable:next line_length
+      self.managedWebView?.evaluateJavaScript("TrackTruck.setCargoToDamaged(\"\(company)\", \"\(worker)\", \"\(cargoId)\")", completionHandler: { res, error in
+        if let res = res {
+          print("res: \(res)")
+          fulfill(res)
+        } else {
+          print("error: \(error?.localizedDescription ?? "nil")")
+          reject(error ?? NSError())
+        }
+      })
+    }
+  }
+
   func getCargoInfo(id: Int) -> Promise<Any?> {
     return Promise { fulfill, _ in
       self.managedWebView?.configuration.userContentController.add(self, name: "handler")
