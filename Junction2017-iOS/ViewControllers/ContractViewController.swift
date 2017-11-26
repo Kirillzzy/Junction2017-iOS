@@ -46,7 +46,9 @@ class ContractViewController: UIViewController {
     "Pharmacy": 1
   ]
   
+  @IBOutlet weak var graph: UIImageView!
   @IBAction func onDoneButtonClick(_ sender: Any) {
+    AppDelegate.selectedBarIndex = 0
     UIApplication.shared.delegate?.window??.rootViewController = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
   }
 
@@ -92,8 +94,11 @@ class ContractViewController: UIViewController {
       switch self.newStatus ?? .inDelivery {
       case .delivered:
         self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
+        self.graph.isHidden = false
+        self.graph.image = #imageLiteral(resourceName: "shaking2")
       default:
         self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) in delivery"
+        self.graph.isHidden = true
       }
 //      DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
 //        UIApplication.shared.delegate?.window??.rootViewController
