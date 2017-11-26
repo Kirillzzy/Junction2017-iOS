@@ -73,6 +73,18 @@ class ContractViewController: UIViewController {
     }
     managedWebView.loadHTMLString(html, baseURL: Bundle.main.bundleURL)
     KRProgressHUD.set(style: .black).show()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in self?.succed() })
+  }
+
+  private func succed() {
+    DispatchQueue.main.async { [unowned self] in
+      KRProgressHUD.set(style: .black).showSuccess()
+      self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+        UIApplication.shared.delegate?.window??.rootViewController
+          = mainStoryboad.instantiateViewController(withIdentifier: "MainTabBarViewContoller")
+      })
+    }
   }
 }
 
@@ -102,11 +114,8 @@ extension ContractViewController: WKNavigationDelegate {
           } else {
             throw NSError() // just jump to catch block
           }
-        }.then { res -> Void in
-          DispatchQueue.main.async { [unowned self] in
-            KRProgressHUD.set(style: .black).showSuccess()
-            self.mainLabel.text = "\(self.cargoInfo.name) from \(self.cargoInfo.company) was successfuly delivered"
-          }
+        }.then { [weak self] res -> Void in
+          self?.succed()
           print("transaction: \(String(describing: res))")
         }.catch { error in
           print("error: \(error)")
